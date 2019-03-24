@@ -5,4 +5,5 @@ if ! [ $(id -u) = 0 ]; then
    exit 1
 fi
 
-minikube stop
+minikube start --vm-driver=none
+helm init
