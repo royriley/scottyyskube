@@ -23,7 +23,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 2048
-    v.cpus = 2
+    v.customize ["modifyvm", :id, "--audio", "none"]
+    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   end
   config.vm.provision "shell", path: "./install/docker.sh", name: "Docker"
   config.vm.provision "shell", path: "./install/minikube.sh", name: "Minikube"
