@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo '\n# Add ~/scripts to path\nPATH="$HOME/scripts:$PATH"\n' >> ~/.profile
+echo '\n# Add ~/scripts and ./bin to path\nPATH="$HOME/scripts:./bin:$PATH"\n' >> ~/.profile
