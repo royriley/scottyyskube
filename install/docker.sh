@@ -20,4 +20,4 @@ add-apt-repository \
    stable"
 
 apt-get update
-apt-get install -y docker-ce docker-ce-cli containerd.io
+apt-get install -y docker-ce=18.06.0~ce~3-0~ubuntu containerd.io
