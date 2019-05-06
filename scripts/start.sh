@@ -5,5 +5,6 @@ if ! [ $(id -u) = 0 ]; then
    exit 1
 fi
 
-minikube start --vm-driver=none
+minikube start --vm-driver=none \
+  --extra-config=kubelet.resolv-conf=/run/systemd/resolve/resolv.conf
 helm init
