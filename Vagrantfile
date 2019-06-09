@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "./scripts", "/home/vagrant/scripts"
 
   config.vm.provider "virtualbox" do |v|
-    v.memory = 4096
+    v.memory = 8192
     v.cpus = 4
     v.customize ["modifyvm", :id, "--audio", "none"]
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
